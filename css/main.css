@@ -6,7 +6,9 @@
     --blue:#044389;
     --pink:#B6174B;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body{
     font-size: 100%;
     background: rgb(148,31,87);
@@ -103,6 +105,24 @@ section{
 }
 .hero-content > *{
     width:calc((100% - 1.5rem) / 2);
+}
+
+.hero-content h2{
+    margin-bottom: 1.5rem;
+}
+
+.hero-content a{
+    background-color: var(--pink);
+    padding:0.5rem 1rem;
+    border-radius: 4px;
+    color:white;
+    text-decoration: none;
+    transition: all 0.1s linear;
+}
+
+.hero-content a:hover{
+    background-color: var(--yellow);
+    color:black;
 }
 /* Characters */
 

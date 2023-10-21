@@ -30,7 +30,7 @@ h2{
     font-size: 3.375rem;
     line-height: 72px;
     letter-spacing: 2px;
-    text-decoration: underline;
+    border-bottom: var(--orange) solid 4px;
     margin-bottom: 3rem;
     text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
@@ -62,7 +62,7 @@ svg{
     border-right:4px solid var(--green); */
 }
 img{
-    border:4px solid var(--orange);
+    border:4px solid var(--pink);
     border-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
 }
@@ -106,17 +106,16 @@ section{
 }
 /* Characters */
 
-.character-container{
+.character-container, .background-container{
     display:flex;
     justify-content: space-between;
 }
-.character-container > *{
+.character-container > *, .background-container > *{
     width:calc((100% - 1.5rem) / 2);
 }
 
-.character-container img{
+.character-container img, .background-container img{
     margin-bottom: 1.5rem;
-    border-color: var(--green);
     box-shadow: none;
     height:552px;
 }

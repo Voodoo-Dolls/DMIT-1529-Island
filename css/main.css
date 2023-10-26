@@ -1,8 +1,9 @@
 /* GRIDS FOR MARKING */
-.container, .hero-content{
-  /* background-image: linear-gradient(#0ff 1px, transparent 1px);
-  background-size: auto 24px; */
-}
+/* Comment Selector to see individual grid */
+/* .container, .hero-content, .about-container > div{
+  background-image: linear-gradient(#0ff 1px, transparent 1px);
+  background-size: auto 24px;
+} */
 
 /* Color Scheme */
 :root {
@@ -16,6 +17,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
+  font-size: 16px; /*Fallback*/
   font-size: 100%;
   background: rgb(148, 31, 87);
   background: linear-gradient(90deg, var(--green) 0%, var(--blue) 100%);
@@ -33,7 +35,7 @@ body {
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  margin-bottom: 4.5rem;
+  margin-bottom: 1.5rem;
 }
 svg {
   height: 288px;
@@ -54,15 +56,18 @@ svg {
 h2 {
   font-family: "Yellowtail", cursive;
   position: relative;
-  color: var(--orange);
+  color: white;
+  font-size: 54px; /* FallBack */
   font-size: 3.375rem;
-  /* Ask About Line Height */
-  line-height: 68px;
-  letter-spacing: 2px;
-  border-bottom: var(--orange) solid 4px;
+  line-height: 1.333;
   margin-bottom: 3rem;
   text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
     1px 1px 0 black;
+}
+.container h2{
+  background-color: var(--blue);
+  padding-left: 1.5rem;
+  border-radius: 4px;
 }
 
 p {
@@ -87,7 +92,7 @@ li {
 
 }
 img {
-  border: 4px solid var(--pink);
+  border: 4px solid var(--orange);
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
 }
@@ -102,7 +107,7 @@ a {
 .hero {
   position: relative;
   width: 100%;
-  height: min(100vh);
+  height: max(100vh, 1008px);
   background-image: url(/images/Hero-BG.webp);
   background-attachment: fixed;
   background-size: cover; 
@@ -132,7 +137,7 @@ a {
   gap:1.5rem;
 }
 
-.about-container > section{
+.about-container > div{
   background-color:#131313;
   padding:1.5rem;
   border-radius: 8px;
@@ -144,10 +149,11 @@ a {
   margin-bottom: 1.5rem;
 }
 
-.about-container a{
+.about-container .link{
   display: flex;
+  justify-content: center;
   align-items: center;
-  width: fit-content;
+  width: 100%;
   height: 48px;
   background-color: var(--pink);
   padding: 0 1rem;
@@ -158,7 +164,7 @@ a {
   font-weight: 600;
 }
 
-.about-container a:hover {
+.about-container .link:hover {
   background-color: var(--yellow);
   color: black;
 }
@@ -183,6 +189,7 @@ a {
 /* Plot Summary */
 p.bold {
   font-weight: 600;
+  font-size: 24px; /*Fallback*/
   font-size: 1.5rem;
   line-height: 3;
   margin-bottom: 1.5rem;
